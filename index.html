@@ -487,6 +487,7 @@ pre.editor-colors .fold-marker:after {
   <body class='markdown-preview' data-use-github-style><h1 id="c-icpc-">C言語講習会　資料　ICPCチャレンジ部</h1>
 <ul>
 <li>目次<ol>
+<li><a href="#&#x57FA;&#x790E;">基礎</a></li>
 <li><a href="#&#x51FA;&#x529B;">出力</a></li>
 <li><a href="#&#x5909;&#x6570;">変数</a></li>
 <li><a href="#&#x5165;&#x529B;">入力</a></li>
@@ -499,9 +500,9 @@ pre.editor-colors .fold-marker:after {
 </ol>
 </li>
 </ul>
-<p><a name="&#x51FA;&#x529B;"> </a></p>
+<p><a name="&#x57FA;&#x790E;"> </a></p>
 <ol>
-<li><p>出力</p>
+<li><p>基礎</p>
 <ul>
 <li><p>早速以下のようなコードを書いてみよう。</p>
 <pre class="editor-colors lang-c"><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--preprocessor syntax--include syntax--c"><span class="syntax--keyword syntax--control syntax--directive syntax--include syntax--c"><span class="syntax--punctuation syntax--definition syntax--directive syntax--c"><span>#</span></span><span>include</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--other syntax--lt-gt syntax--include syntax--c"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--c"><span>&lt;</span></span><span>stdio.h</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--c"><span>&gt;</span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--storage syntax--type syntax--c"><span>int</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function syntax--c"><span class="syntax--entity syntax--name syntax--function syntax--c"><span>main</span></span><span class="syntax--punctuation syntax--section syntax--arguments syntax--begin syntax--bracket syntax--round syntax--c"><span>(</span></span><span class="syntax--punctuation syntax--section syntax--arguments syntax--end syntax--bracket syntax--round syntax--c"><span>)</span></span></span><span class="syntax--meta syntax--block syntax--c"><span class="syntax--punctuation syntax--section syntax--block syntax--begin syntax--bracket syntax--curly syntax--c"><span>{</span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--block syntax--c"><span>&nbsp;</span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--block syntax--c"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--c"><span>return</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--c"><span>0</span></span><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--block syntax--c"><span class="syntax--punctuation syntax--section syntax--block syntax--end syntax--bracket syntax--curly syntax--c"><span>}</span></span></span></span></div></pre>
@@ -512,6 +513,21 @@ pre.editor-colors .fold-marker:after {
 <li>C言語では、文の終わりに<code>;</code>(セミコロン)をつけます。日本語の <strong>。</strong> のようなものです。</li>
 </ul>
 </li>
+<li>コメント<ul>
+<li>C言語では、コード中にプログラム以外のことを書くことができます。<ul>
+<li>これをコメントと呼び、<code>/* */</code>で囲まれた範囲がコメントとして扱われます。</li>
+<li>また、<code>//</code>で行末までをコメントとして扱えます。</li>
+<li>コメント中では、日本語を使うことができます。</li>
+<li>通常コメントには、プログラムの説明やコードの意味などを、わかりやすくするために用いられます。<pre class="editor-colors lang-c"><div class="line"><span class="syntax--source syntax--c"><span class="syntax--comment syntax--block syntax--c"><span class="syntax--punctuation syntax--definition syntax--comment syntax--begin syntax--c"><span>/*</span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--comment syntax--block syntax--c"><span>C言語の基礎</span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--comment syntax--block syntax--c"><span class="syntax--punctuation syntax--definition syntax--comment syntax--end syntax--c"><span>*/</span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--preprocessor syntax--include syntax--c"><span class="syntax--keyword syntax--control syntax--directive syntax--include syntax--c"><span class="syntax--punctuation syntax--definition syntax--directive syntax--c"><span>#</span></span><span>include</span></span><span>&nbsp;</span><span class="syntax--string syntax--quoted syntax--other syntax--lt-gt syntax--include syntax--c"><span class="syntax--punctuation syntax--definition syntax--string syntax--begin syntax--c"><span>&lt;</span></span><span>stdio.h</span><span class="syntax--punctuation syntax--definition syntax--string syntax--end syntax--c"><span>&gt;</span></span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--storage syntax--type syntax--c"><span>int</span></span><span>&nbsp;</span><span class="syntax--meta syntax--function syntax--c"><span class="syntax--entity syntax--name syntax--function syntax--c"><span>main</span></span><span class="syntax--punctuation syntax--section syntax--arguments syntax--begin syntax--bracket syntax--round syntax--c"><span>(</span></span><span class="syntax--punctuation syntax--section syntax--arguments syntax--end syntax--bracket syntax--round syntax--c"><span>)</span></span></span><span>&nbsp;</span><span class="syntax--meta syntax--block syntax--c"><span class="syntax--punctuation syntax--section syntax--block syntax--begin syntax--bracket syntax--curly syntax--c"><span>{</span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--block syntax--c"><span class="syntax--punctuation syntax--whitespace syntax--comment syntax--leading syntax--cpp"><span>&nbsp;&nbsp;&nbsp;</span></span><span class="syntax--comment syntax--line syntax--double-slash syntax--cpp"><span class="syntax--punctuation syntax--definition syntax--comment syntax--cpp"><span>//</span></span><span>ここにコードを書き加えていく。</span></span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--block syntax--c"><span>&nbsp;&nbsp;&nbsp;</span><span class="syntax--keyword syntax--control syntax--c"><span>return</span></span><span>&nbsp;</span><span class="syntax--constant syntax--numeric syntax--c"><span>0</span></span><span>;</span></span></span></div><div class="line"><span class="syntax--source syntax--c"><span class="syntax--meta syntax--block syntax--c"><span class="syntax--punctuation syntax--section syntax--block syntax--end syntax--bracket syntax--curly syntax--c"><span>}</span></span></span></span></div></pre>
+<a name="&#x51FA;&#x529B;"> </a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>出力</p>
+<ul>
 <li><p>C言語では、<code>printf</code>という関数を使って出力を行います。</p>
 <ul>
 <li><code>printf</code>のfは、formatの略</li>
